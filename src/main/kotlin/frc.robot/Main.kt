@@ -7,9 +7,7 @@
 
 package frc.robot;
 
-import java.util.function.Supplier
-
-import edu.wpi.first.wpilibj.RobotBase;
+import edu.wpi.first.wpilibj.RobotBase
 
 /**
  * Do NOT add any static variables to this class, or any initialization at all.
@@ -17,14 +15,13 @@ import edu.wpi.first.wpilibj.RobotBase;
  * change the parameter class to the startRobot call.
  */
 object Main {
-  /**
-   * Main initialization function. Do not perform any initialization here.
-   *
-   * <p>If you change your main robot class, change the parameter type.
-   */
-  def main(args: Array[String]) {
-    RobotBase.startRobot(new Supplier[Robot] {
-      override def get(): Robot = new Robot()
-    })
-  }
+    /**
+     * Main initialization function. Do not perform any initialization here.
+     *
+     * <p>If you change your main robot class, change the parameter type.
+     */
+    @JvmStatic
+    fun main(args: Array<String>) {
+        RobotBase.startRobot { Robot() }
+    }
 }
